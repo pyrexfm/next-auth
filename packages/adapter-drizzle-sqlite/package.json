@@ -22,7 +22,7 @@
   },
   "scripts": {
     "clean": "rm -rf ./drizzle && rm -f db.sqlite",
-    "generate-schema": "drizzle-kit generate:mysql --schema=src/schema.ts --breakpoints",
+    "generate-schema": "drizzle-kit generate:sqlite --schema=src/schema.ts --breakpoints",
     "test:init": "pnpm clean && pnpm generate-schema",
     "test": "pnpm test:init && jest",
     "build": "pnpm clean && drizzle-kit generate:sqlite --schema=src/schema.ts && tsc",
