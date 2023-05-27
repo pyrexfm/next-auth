@@ -104,7 +104,7 @@ export function PlanetScaleAdapter(
           )
           .then((res) => res[0])) ?? null
 
-      return user.users
+      return user?.users
     },
     deleteSession: async (sessionToken) => {
       await client
